@@ -1,0 +1,153 @@
+/*color 
+#5E7A0B
+#A5CB37
+#EFF1ED
+#AFC196
+#86B712
+#505E27
+#93A65C
+#EFF0EE
+#ADB6A0
+#758E3B
+*/
+@import url("grid.css");
+
+
+
+* 
+{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+html, body {
+    font-family: varela, "century gothic", helvetica, arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    background: url("img/pattern.png") repeat top left #fdfdfd;
+    margin：0px；
+    
+}
+
+#box {
+    margin: auto auto;
+    max-width: 1680px;
+    background: #f4f4f4;
+}
+
+#container {
+    background: #fdfdfd;
+}
+
+#main {
+    border-bottom: 1px solid #e0e3e5;
+    background: #fdfdfd;
+}
+
+hr {
+    border-color: #e0e3e5;
+    border-width: 0px 0px 1px 0px;
+    margin: 0px auto 1em;
+    width: 20%;
+}
+
+/* header------------------------------*/
+#menu {
+    display: none;
+    width: 100%;
+    position: relative;
+    font-size: 90%;
+    border-bottom: 1px solid rgba(225,227,229,0.5);
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 30px;
+}
+
+#menu ul li {
+    margin-bottom: 0px;
+    line-height: 2em;
+}
+
+#menu ul li a{
+    display: block;
+    color: #e0e3e5;
+}
+
+#logoandmore {
+    border-width: 0px 0px 0px;
+    border-style: solid none;
+    border-color: #e0e3e5;
+    padding: 15px 0px 5px;
+}
+
+#logoandmore:hover {
+    cursor: pointer;
+}
+
+.logo {
+    padding-left: 30px;
+    height: 25px;
+    display: block;
+    float: left;
+    padding-right: 5px;
+    width: 91px;
+}
+
+.inactive .logo {
+    /*background: url("/wp-content/themes/yeedor/_assets/logos/yeedor.png") no-repeat 30px top transparent;*/
+    background-size: 91px;
+}
+
+.active .logo {
+    /*background: url("/wp-content/themes/yeedor/_assets/logos/yeedor-active.png") no-repeat 30px top transparent;*/
+    background-size: 91px;
+}
+
+
+#arrow {
+    display: block;
+    height: 16px;
+    width: 16px;
+    float: left;
+    background-color: transparent;
+    background-image: url(img/arrow-sprite.png);
+    background-position: center -16px;
+    background-repeat: no-repeat;
+    padding: 0 5px;
+     -webkit-transition: all 500ms ease;
+		-moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+		transition: all 500ms ease;
+}
+
+#arrow-down:hover {
+    -webkit-transition: all 500ms ease;
+		-moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+		transition: all 500ms ease;
+}
+
+.arrow-down:before,
+.arrow-down:after {
+    content:"";
+    display:table;
+}
+
+.arrow-down:after {
+    clear:both;
+}
+
+.active {
+    background: #93A65C;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
