@@ -1,0 +1,496 @@
+img, .wp-caption {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.lazy {
+    opacity: 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+    font-size: 70%;
+    border-width: 0px 0px 0px 0px;
+    border-style: dotted;
+    border-color: #e0e3e5;
+    padding: 0.5em 0.5em 1em;
+    line-height: 1.5em;
+}
+
+/*Homepage------------------------------------------------*/
+
+.widget .execphpwidget {
+    position: relative;
+    min-width: 175px;
+    min-height: 175px;
+    background: url("img/loading.gif") center center no-repeat;
+}
+
+.featured-image {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    min-height: 175px;
+    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+}
+
+.home #main a {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% auto;
+    opacity: 1.0;
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: 600px;
+}
+
+.home-main-a {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% auto;
+    opacity: 1.0;
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: 600px;
+}
+
+.image {
+    padding: 30px 30px;
+    border-bottom: 1px solid #e0e3e5;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-blog-image {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 100%;
+    padding: 0px 0px;
+    text-align: center;
+    line-height: 0em;
+    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+}
+
+.home .image {
+    padding: 0px 0px;
+}
+
+#home-post {
+    padding: 0px 0px;
+    border-top-color: #e0e3e5;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+/*Avatar------------------------------------------------*/
+
+#avatar {
+    padding-right: 30px;
+    text-align: center;
+}
+#avatar img{
+    max-height: 200px;
+    width: auto;
+}
+
+/*Social------------------------------------------------*/
+
+#social a{
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+/*Instagrams------------------------------------------------*/
+
+.single-instagrams .content .entry{
+    text-align: center;
+}
+
+.single-instagrams .content .entry p {
+    margin-bottom: 0em;
+}
+
+.single-instagrams .content .entry a {
+    background: transparent;
+    padding: 0px 0px;
+}
+
+.single-instagrams .content .entry p.insta-link a{
+    background: none repeat scroll 0 0 #F0F3F5;
+    padding: 4px 5px 3px;
+}
+
+/*Blogroll------------------------------------------------*/
+
+#blogroll article .photo a {
+    display: block;
+    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+}
+
+/*Design Process--------------------------------------------*/
+
+#design-process #step-1 {
+    border-bottom: 1px solid #e0e3e5;
+
+}
+
+#design-process #step-2 img,
+#design-process #step-3 img,
+#design-process #step-4 img,
+#design-process #step-5 img   {
+    width: 35%;
+    height: auto;
+}
+
+#design-process .step p {
+    padding: 0em 2em;
+    line-height: 1.75em;
+    margin-bottom: 0em;
+}
+
+/*Blogroll Photo Thumbnails---------------------------------*/
+
+.photo a {
+    opacity: 1.0;
+
+}
+
+.photo a img {
+    width: 100%;
+    height: auto;
+}
+
+/*About Page-------------------------------------------------*/
+
+.page-template-page-about-php .content img {
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+/*Post Pages----------------------------------------------*/
+
+.entry img, .photo img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.pale-image {
+    border: 1px solid #e0e3e5;
+}
+
+
+/*Slideshows----------------------------------------------*/
+
+.royalSlider {
+    border: 1px solid #e0e3e5;
+    margin-bottom: 2em;
+}
+
+.single .rsUni .rsGCaption {
+    background: #666666;
+    color: #ccc;
+    padding: 8px 10px;
+    border-radius: 0;
+    font-size: 75%;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    line-height: 1.5em;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+a#about-me {
+    background-image: url("img/icon-aboutme.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#works {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-portfolio.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#design-process {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-process.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#conferences {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-workshops.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#blog {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-blog.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#bicycle-manifesto {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-bikes.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#self-portraits {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-portraits.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#survival {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-eats.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#bucketlist {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-bucketlist.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#lists {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-lists.png");
+}
+
+/*----------------------------------------------------------*/
+
+a#instagrams {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-instagrams.png");
+}
+
+
+/*----------------------------------------------------------*/
+
+a#contact {
+    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-contact.png");
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width: 0px) and (max-width: 340px) {
+
+    .home-main-a {
+        height: 175px;
+    }
+
+    .photo {
+        padding: 0px 0em 0.5em;
+    }
+
+    .entry img, .photo img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    #social {
+        text-align: center;
+        padding-right: 0px;
+        padding-top: 1em;
+    }
+    #blogroll article .photo a {
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width: 341px) and (max-width: 489px) {
+
+    .home-main-a {
+        height: 225px;
+    }
+
+    .photo {
+        padding: 0px 0em 1em;
+    }
+
+    .instagram {
+        text-align: center;
+    }
+
+    .entry img, .photo img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    #social {
+        text-align: center;
+        padding-right: 0px;
+        padding-top: 1em;
+    }
+    #blogroll article .photo a {
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width: 490px) and (max-width: 769px) {
+
+    .home-main-a {
+        height: 275px;
+    }
+
+    .home .widget {
+        border-right-color: #f4f4f4;
+    }
+
+    .instagram {
+        text-align: center;
+    }
+
+    .photo {
+        padding: 0px 0em 1em;
+        text-align: center;
+    }
+
+    .photo img {
+        max-width: 75%;
+        height: auto;
+        width: 75%;
+    }
+
+    .entry img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    #social {
+        text-align: center;
+        padding-right: 0px;
+        padding-top: 1em;
+    }
+    #blogroll article .photo a {
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    .home-main-a {
+        height: 215px;
+    }
+
+    .entry img, .photo img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .photo {
+        padding-right: 2em;
+        padding-left: 5px;
+    }
+
+    #social {
+        text-align: right;
+        padding-right: 20px;
+    }
+    #blogroll article .photo a {
+        min-width: 100px;
+        min-height: 100px;
+        
+    }
+
+    #site-description #toggle {
+        width: 25%;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .home-main-a  {
+        height: 165px;
+    }
+
+    .photo {
+        padding-right: 2em;
+    }
+
+    #social {
+        text-align: right;
+        padding-right: 20px;
+    }
+    #blogroll article .photo a {
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+    .single-instagrams .content img{
+        width: 75%;
+        max-width: 768px;
+    }
+
+}
+
+@media screen and (min-width: 1281px) {
+    .home-main-a {
+        height: 215px;
+    }
+
+    .entry img, .photo img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .photo {
+        padding-right: 2em;
+    }
+
+    #social {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    #blogroll article .photo a {
+        min-width: 175px;
+        min-height: 175px;
+    }
+
+    .single-instagrams .content img{
+        width: 75%;
+        max-width: 768px;
+    }
+
+
+}
+
+
+
+
+
+
+#recentpostimg {
+    border-right-color: #e0e3e5;
+    border-right-style: solid;
+    border-right-width: 1px;
+}

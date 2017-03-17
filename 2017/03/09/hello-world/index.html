@@ -11,11 +11,17 @@
    
     <!-- stylesheets list from config.yml -->
     
+      <link type="text/css" rel="stylesheet" href="/css/single.css">
+    
       <link type="text/css" rel="stylesheet" href="/css/NoneTone.css">
     
       <link type="text/css" rel="stylesheet" href="/css/grid.css">
     
       <link type="text/css" rel="stylesheet" href="/css/type.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/img.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/related.css">
     
   
 </head>
@@ -23,36 +29,49 @@
 <body>
   <div id="box" class="hfead">
     <header id="header" >
-        <section id="menu">
-            
-            <a href="/">Home</a>
-            
-            <a href="/archives">Recent</a>
-            
-            <a href="/category">Category</a>
-            
-            <a href="/tags">Tags</a>
-            
-            <a href="/design">Design</a>
-            
-            <a href="/userresearch">UserResearch</a>
-            
-            <a href="/coding">Coding</a>
-            
-            <a href="/academic">Academic</a>
-            
-            <a href="/psychology">Psychology</a>
-            
-            <a href="/mindpool">MindPool</a>
-            
-            <a href="/resume">Resume</a>
-            
-            <a href="categories/others">Other</a>
-            
-            <a href="/about">About</a>
-            
-            <a href="/contact">Contact</a>
-            
+        
+        <section id="menu" class="row cf inactive">
+            <ul class="span_1 col">
+                <li>
+                    <a href="/">Main Page</a>
+                </li>
+                <li>
+                    <a href="/archives">Recent</a>
+                </li>
+                <li>
+                    <a href="/resume">Resume</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/design">Design</a>
+                </li>
+                <li>
+                    <a href="/categories/user research">User Research</a>
+                </li>
+                <li>
+                    <a href="/categories/academic">Academic</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/psychology">Phychology</a>
+                </li>
+                <li>
+                    <a href="/categories/coding">Coding</a>
+                </li>
+                <li>
+                    <a href="/categories/mindpool">Mindpool</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
         </section>
         <section id="logoandmore" class="row cf">
             <div id="profession" class="col span 4">
@@ -60,27 +79,104 @@
                 <div id="arrow"></div>
             </div>  
         </section>
+
     </header>
     <div id="container">
-             
-<article id="post">
-  <h1>Hello World</h1>
-  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<p>Other more: 123<br><blockquote><p>I love you forever</p>
-</blockquote></p>
+             <div class="row cf" id="main">
+    <div class="col span_4 content" id="full-single">
+        <div>
+            <section class="row cf title" id="posthead">
+                <div class="col span_4">
+                    <h1>Hello World</h1>
+                    <h3 class="subhead"></h3>
+                    <p class="date">
+                        <time datetime="2017-03-09T11:11:36.000Z">
+                        3/9/2017
+                        
+    • 
+    <a class="article-category-link" href="/categories/others/">others</a>
+                      
+                        
+            with
+            <a class="article-tag-link" href="/tags/hexo/">-hexo</a>
 
-</article>
+
+                    </time>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="entry-content row cf">
+            <div class="featured-image span_4">
+                No Abstract
+            </div>
+            <div class="entry" id="long-format">
+                <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+
+            </div>
+            <div class="yarpp-related">
+                <h3>Other Posts</h3>
+                <ol class="row cf ralated-posts" id="related-post">
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/09/hello-world/">
+                                  No Abstract
+                                  Hello World
+                                </a>
+                              
+                        </li>
+
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/15/img/">
+                                  <img src="/2017/03/15/img/earth.jpg" alt="img" title="img">
+                                  img
+                                </a>
+                              
+                        </li>
+
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/15/new-start/">
+                                  <img src="/2017/03/15/new-start/bowl.jpg" alt="bowl.jpg" title="">
+                                  new start
+                                </a>
+                              
+                        </li>
+
+                    
+                    
+                    <p><a class="article-tag-link" href="/tags/hexo/">-hexo</a>
+                        
+                        
+                        </p>
+
+                    
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <nav id="pagination">
+  
+    <a href="/2017/03/15/img/" class="prev">&larr; Prev</a>
   
 
   
@@ -90,6 +186,15 @@
 
    
     </div>
+    <section id="bottom" class="row cf">
+        <div class="col span_2">
+
+        <ul>
+            <li>© 2017 <a href="http://blog.chenxiaolintryme.com" style="opacity: 1;"></a></li>
+        </ul>
+    </div>
+        
+    </section>
     
       <!-- scripts list from theme config.yml -->
       
@@ -98,6 +203,8 @@
         <script src="/js/header.js"></script>
       
         <script src="/js/easing.js"></script>
+      
+        <script src="/js/effects.js"></script>
       
     
   </div>

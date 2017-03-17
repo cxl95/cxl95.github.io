@@ -130,7 +130,7 @@ h3.subhead {
    border-bottom: 1px solid #e0e3e5;
 }
 
-.single .title {
+.single.title {
     text-align: center;
 }
 
@@ -535,3 +535,7 @@ span.category {
 
 
 
+
+#posthead {
+    text-align: center
+}

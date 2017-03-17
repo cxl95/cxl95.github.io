@@ -11,11 +11,17 @@
    
     <!-- stylesheets list from config.yml -->
     
+      <link type="text/css" rel="stylesheet" href="/css/single.css">
+    
       <link type="text/css" rel="stylesheet" href="/css/NoneTone.css">
     
       <link type="text/css" rel="stylesheet" href="/css/grid.css">
     
       <link type="text/css" rel="stylesheet" href="/css/type.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/img.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/related.css">
     
   
 </head>
@@ -23,36 +29,49 @@
 <body>
   <div id="box" class="hfead">
     <header id="header" >
-        <section id="menu">
-            
-            <a href="/">Home</a>
-            
-            <a href="/archives">Recent</a>
-            
-            <a href="/category">Category</a>
-            
-            <a href="/tags">Tags</a>
-            
-            <a href="/design">Design</a>
-            
-            <a href="/userresearch">UserResearch</a>
-            
-            <a href="/coding">Coding</a>
-            
-            <a href="/academic">Academic</a>
-            
-            <a href="/psychology">Psychology</a>
-            
-            <a href="/mindpool">MindPool</a>
-            
-            <a href="/resume">Resume</a>
-            
-            <a href="categories/others">Other</a>
-            
-            <a href="/about">About</a>
-            
-            <a href="/contact">Contact</a>
-            
+        
+        <section id="menu" class="row cf inactive">
+            <ul class="span_1 col">
+                <li>
+                    <a href="/">Main Page</a>
+                </li>
+                <li>
+                    <a href="/archives">Recent</a>
+                </li>
+                <li>
+                    <a href="/resume">Resume</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/design">Design</a>
+                </li>
+                <li>
+                    <a href="/categories/user research">User Research</a>
+                </li>
+                <li>
+                    <a href="/categories/academic">Academic</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/psychology">Phychology</a>
+                </li>
+                <li>
+                    <a href="/categories/coding">Coding</a>
+                </li>
+                <li>
+                    <a href="/categories/mindpool">Mindpool</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
         </section>
         <section id="logoandmore" class="row cf">
             <div id="profession" class="col span 4">
@@ -60,6 +79,7 @@
                 <div id="arrow"></div>
             </div>  
         </section>
+
     </header>
     <div id="container">
              
@@ -80,6 +100,15 @@
 
    
     </div>
+    <section id="bottom" class="row cf">
+        <div class="col span_2">
+
+        <ul>
+            <li>© 2017 <a href="http://blog.chenxiaolintryme.com" style="opacity: 1;"></a></li>
+        </ul>
+    </div>
+        
+    </section>
     
       <!-- scripts list from theme config.yml -->
       
@@ -88,6 +117,8 @@
         <script src="/js/header.js"></script>
       
         <script src="/js/easing.js"></script>
+      
+        <script src="/js/effects.js"></script>
       
     
   </div>
