@@ -95,15 +95,17 @@ hr {
     float: left;
     padding-right: 5px;
     width: 91px;
+    background: url("img/logo.png") no-repeat 30px top transparent;
+    background-size: 91px;
 }
 
 .inactive .logo {
-    /*background: url("/wp-content/themes/yeedor/_assets/logos/yeedor.png") no-repeat 30px top transparent;*/
+    background: url("img/logo.png") no-repeat 30px top transparent;
     background-size: 91px;
 }
 
 .active .logo {
-    /*background: url("/wp-content/themes/yeedor/_assets/logos/yeedor-active.png") no-repeat 30px top transparent;*/
+    background: url("img/logo-active.png") no-repeat 30px top transparent;
     background-size: 91px;
 }
 
@@ -170,6 +172,52 @@ hr {
 .page-template-page-fullwidth-php article {
     border-bottom-width: 0px;
 }
+
+
+
+/*Sidebar------------------------------------------*/
+
+#sidebar h3 {
+    line-height: 1.5em;
+    font-size: 80%;
+    text-transform: uppercase;
+    font-family: varela,"century gothic",helvetica,arial,sans-serif;
+    margin-bottom: 0.5em;
+}
+
+#sidebar {
+    width: 200px;
+    background-color: #d9dbd6;
+    position: absolute;
+    right: 0px;
+    z-index: 9999
+}
+
+#sidebar ul li.widget:last-child {
+    border-bottom: 0px solid #e0e3e5;
+}
+
+#sidebar li {
+    font-size: 100%;
+    list-style-type: none;
+}
+
+#sidebar .widget {
+    padding: 30px;
+    border-bottom: 1px solid #e0e3e5;
+}
+
+.single #sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.single #sidebar ul li.widget {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+
 
 
 
@@ -250,7 +298,7 @@ hr {
 
 #bottom ul li:first-child a{
     display: inline-block;
-    background: url('/wp-content/themes/yeedor/_assets/logos/yeedor.png') no-repeat bottom right;
+    /*background: url('/wp-content/themes/yeedor/_assets/logos/yeedor.png') no-repeat bottom right;*/
     background-size: 63px;
     width: 65px;
     height: 12px;
@@ -411,6 +459,10 @@ hr {
 
 
 }
+
+
+
+
 
 
 

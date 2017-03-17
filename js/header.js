@@ -15,10 +15,10 @@ $(document).ready(function () {
                 if ($(this).is(':visible')) {
                         $('#header').addClass('active');
                         $('#header').removeClass('inactive');
-                        $('#arrow').css("background-image", "url(css/img/arrow-sprite-active.png)");} 
+                        $('#arrow').css("background-image", "url(/css/img/arrow-sprite-active.png)");} 
                 else {
                         $('#header').addClass('inactive');
                         $('#header').removeClass('active');
-                        $('#arrow').css("background-image", "url(css/img/arrow-sprite.png)");}
+                        $('#arrow').css("background-image", "url(/css/img/arrow-sprite.png)");}
             })});
 });

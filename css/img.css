@@ -23,7 +23,7 @@ img, .wp-caption {
 .widget .execphpwidget {
     position: relative;
     min-width: 175px;
-    min-height: 175px;
+
     background: url("img/loading.gif") center center no-repeat;
 }
 
@@ -32,7 +32,7 @@ img, .wp-caption {
     max-width: 100%;
     width: 100%;
     min-height: 175px;
-    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+    background: url("img/loading.gif") center center no-repeat;
 }
 
 .home #main a {
@@ -76,7 +76,7 @@ img, .wp-caption {
     padding: 0px 0px;
     text-align: center;
     line-height: 0em;
-    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+    background: url(img/loading.gif") center center no-repeat;
 }
 
 .home .image {
@@ -131,7 +131,7 @@ img, .wp-caption {
 
 #blogroll article .photo a {
     display: block;
-    background: url("/wp-content/themes/yeedor/_assets/icons/loading.gif") center center no-repeat;
+    background: url("img/loading.gif") center center no-repeat;
 }
 
 /*Design Process--------------------------------------------*/
@@ -310,7 +310,6 @@ a#contact {
         min-width: 175px;
         min-height: 175px;
     }
-
 }
 
 /*----------------------------------------------------------*/
@@ -441,7 +440,7 @@ a#contact {
     }
     #blogroll article .photo a {
         min-width: 175px;
-        min-height: 175px;
+        min-height: 87px;
     }
 
     .single-instagrams .content img{
@@ -476,6 +475,7 @@ a#contact {
         min-height: 175px;
     }
 
+
     .single-instagrams .content img{
         width: 75%;
         max-width: 768px;
@@ -494,3 +494,5 @@ a#contact {
     border-right-style: solid;
     border-right-width: 1px;
 }
+
+
