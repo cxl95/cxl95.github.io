@@ -404,6 +404,7 @@ hr {
         display: block;
     }
 
+
     #execphp-20, #categories-3 {
         border-top: 1px solid #e0e3e5;
     }
@@ -431,6 +432,10 @@ hr {
         .excerpt {
             display: none;
         }
+        
+        #article-list-date {
+        padding-left: 0px;
+        }
 
         .image .overview .excerpt {
             display: inline !important;
@@ -447,7 +452,13 @@ hr {
     .page-template-page-products-php .content .excerpt {
         width: 80%;
     }
-
+    
+    .excerpt {
+        padding-left: 175px;
+    }
+    #article-list-date {
+        padding-left: 175px;
+    }
 }
 
 @media screen and (min-width: 1281px) {
@@ -455,7 +466,13 @@ hr {
     .page-template-page-products-php .content .excerpt {
         width: 80%;
     }
-
+    
+     .excerpt {
+        padding-left: 260px;
+    }
+    #article-list-date {
+        padding-left: 260px;
+    }
 
 
 }
