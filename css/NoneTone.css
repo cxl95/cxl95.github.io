@@ -286,22 +286,22 @@ hr {
 
 #bottom ul {
     list-style-type: none;
-    padding: 0px 30px;
+    padding: 0px 50px;
 
 }
 
 #bottom ul li {
     display: inline-block;
     margin-bottom: 0;
-    padding: 0 10px 0px 0px;
+    padding: 0 15px 0px 0px;
 }
 
 #bottom ul li:first-child a{
     display: inline-block;
-    /*background: url('/wp-content/themes/yeedor/_assets/logos/yeedor.png') no-repeat bottom right;*/
-    background-size: 63px;
-    width: 65px;
-    height: 12px;
+    background: url('img/logo-small-2.png') no-repeat center right;
+    background-size: 300px;
+    width: 300px;
+    height: 100px;
 }
 
 #legal {

@@ -218,14 +218,14 @@ a#about-me {
 
 /*----------------------------------------------------------*/
 
-a#works {
-    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-portfolio.png");
+a#research {
+    background-image: url("img/icon-process.png");
 }
 
 /*----------------------------------------------------------*/
 
 a#design-process {
-    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-process.png");
+    background-image: url("img/icon-designing.png");
 }
 
 /*----------------------------------------------------------*/
@@ -237,7 +237,7 @@ a#conferences {
 /*----------------------------------------------------------*/
 
 a#blog {
-    background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-blog.png");
+    background-image: url("img/icon-mindpool.png");
 }
 
 /*----------------------------------------------------------*/
@@ -283,6 +283,12 @@ a#contact {
     background-image: url("/wp-content/themes/yeedor/_assets/icons/icon-contact.png");
 }
 
+a#bottom-icon {
+    background-image: url("img/logo-small.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100px;
+}
 /*----------------------------------------------------------*/
 
 @media screen and (min-width: 0px) and (max-width: 340px) {
