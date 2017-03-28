@@ -1,0 +1,313 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+  <title>「编程导论」第14讲NoneTone</title>
+   
+    <!-- stylesheets list from config.yml -->
+    
+      <link type="text/css" rel="stylesheet" href="/css/single.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/NoneTone.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/grid.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/type.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/img.css">
+    
+      <link type="text/css" rel="stylesheet" href="/css/related.css">
+    
+  
+</head>
+
+<body>
+  <div id="box" class="hfead">
+    <header id="header" >
+        
+        <section id="menu" class="row cf inactive">
+            <ul class="span_1 col">
+                <li>
+                    <a href="/">Main Page 主页</a>
+                </li>
+                <li>
+                    <a href="/archives">Recent 最新发布</a>
+                </li>
+                <li>
+                    <a href="/resume">Resume 简历</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/design">Design 设计</a>
+                </li>
+                <li>
+                    <a href="/categories/user research">User Research 用户研究</a>
+                </li>
+                <li>
+                    <a href="/categories/academic">Academic 学术</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/categories/psychology">Psychology 心理学</a>
+                </li>
+                <li>
+                    <a href="/categories/coding">Coding 编程艺术</a>
+                </li>
+                <li>
+                    <a href="/categories/mindpool">Mindpool 竹林小馆</a>
+                </li>
+            </ul>
+            <ul class="span_1 col">
+                <li>
+                    <a href="/about">About 关于筱琳</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact 联系方式</a>
+                </li>
+            </ul>
+        </section>
+        <section id="logoandmore" class="row cf">
+            <div id="profession" class="col span 4">
+                <div class="logo"></div>
+                <div id="arrow"></div>
+            </div>  
+        </section>
+
+    </header>
+    <div id="container">
+             <div class="row cf" id="main">
+    <div class="col span_4 content" id="full-single">
+        <div>
+            <section class="row cf title" id="posthead">
+                <div class="col span_4">
+                    <h1>「编程导论」第14讲</h1>
+                    <h3 class="subhead"></h3>
+                    <p class="date">
+                        <time datetime="2017-03-27T02:17:15.000Z">
+                        3/27/2017
+                        
+    • 
+    <a class="article-category-link" href="/categories/coding/">coding</a>
+                      
+                        
+            with
+            <a class="article-tag-link" href="/tags/编程导论/">编程导论</a>
+
+
+                    </time>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="entry-content row cf">
+            <div class="featured-image span_4">
+                <img src="/2017/03/27/「编程导论」第14讲/14.jpg" alt="14.jpg" title="">
+            </div>
+            <div class="entry" id="long-format">
+                <h2 id="Tree-definition"><a href="#Tree-definition" class="headerlink" title="Tree definition"></a>Tree definition</h2><ul>
+<li>A tree consists of one or more nodes <ul>
+<li>A node typically has a value associated with it</li>
+</ul>
+</li>
+<li>Nodes are connected by branches</li>
+<li>A tree starts with root node</li>
+<li>Except for leaves, each node has one or more children <ul>
+<li>We refer to a node which has a child  as the parent  node</li>
+</ul>
+</li>
+<li>In simple trees, no child has more than one parent, but the generalization(often called a graph) is also very useful</li>
+</ul>
+<img src="/2017/03/27/「编程导论」第14讲/14-1.jpg" alt="14-1.jpg" title="">
+<h2 id="Binary-trees"><a href="#Binary-trees" class="headerlink" title="Binary trees"></a>Binary trees</h2><ul>
+<li>A binary tree is a special version of a tree, where each node has at most two children</li>
+<li>Binary trees are very useful when storing and searching ordered data, or when determining the best decision to make in solving many classes of problems<ul>
+<li>such trees are often called decision trees</li>
+</ul>
+</li>
+</ul>
+<h2 id="Binary-tree-class"><a href="#Binary-tree-class" class="headerlink" title="Binary tree class"></a>Binary tree class</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">binaryTree</span><span class="params">(object)</span>:</span></div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></div><div class="line">         self.value = value</div><div class="line">         self.leftBranch = <span class="keyword">None</span></div><div class="line">         self.rightBranch = <span class="keyword">None</span></div><div class="line">         self.parent = <span class="keyword">None</span></div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">setLeftBranch</span><span class="params">(self, node)</span>:</span></div><div class="line">         self.leftBranch = node</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">setRightBranch</span><span class="params">(self, node)</span>:</span></div><div class="line">         self.rightBranch = node</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">setParent</span><span class="params">(self, parent)</span>:</span></div><div class="line">         self.parent = parentj</div><div class="line">      <span class="comment"># and other methods</span></div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">getValue</span><span class="params">(self)</span>:</span></div><div class="line">         <span class="keyword">return</span> self.value</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">getLeftBranch</span><span class="params">(self)</span>:</span></div><div class="line">         <span class="keyword">return</span> self.leftBranch</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">getRightBranch</span><span class="params">()</span>:</span></div><div class="line">         <span class="keyword">return</span> self.rightBranch</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">getParent</span><span class="params">(self)</span>:</span></div><div class="line">         <span class="keyword">return</span> self.parent</div><div class="line">      <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></div><div class="line">         <span class="keyword">return</span> self.value</div></pre></td></tr></table></figure>
+<h2 id="Searching-a-tree"><a href="#Searching-a-tree" class="headerlink" title="Searching a tree"></a>Searching a tree</h2><ul>
+<li>Imagine we want to examine a tree<ul>
+<li>To determine if an element is parent</li>
+<li>To find a path to a soluion point</li>
+<li>To make a series of decision to reach some objective</li>
+</ul>
+</li>
+<li>Depth first search<ul>
+<li>start with the root </li>
+<li>At any node, if we haven’t reached our objective, take the left branch first</li>
+<li>When get to a leaf, backtrack to the first decision point and take the right branch </li>
+</ul>
+</li>
+<li>Breadth frist search<ul>
+<li>Start with the root </li>
+<li>Then proceed to each child at the next level, in order </li>
+<li>Continue until reach objective</li>
+</ul>
+</li>
+</ul>
+<h2 id="Depth-first-search-for-containment"><a href="#Depth-first-search-for-containment" class="headerlink" title="Depth first search for containment"></a>Depth first search for containment</h2><ul>
+<li>Idea is to keep a data structure (called a stack) that. holds nodes still to be explored</li>
+<li>Use an evaluation function to determine when reach objective (i.e. for containment, whether value of node is equal to desired value)</li>
+<li>Start with the root node</li>
+<li>Then add children, if any, to front of data structure, with left branch first</li>
+<li>Continue in this manner </li>
+</ul>
+<h2 id="DFS-Code"><a href="#DFS-Code" class="headerlink" title="DFS Code"></a>DFS Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSBinary</span><span class="params">(root, fcn)</span>:</span></div><div class="line">    stack = [root]</div><div class="line">    <span class="keyword">while</span> len(stack)&gt;<span class="number">0</span>:</div><div class="line">        <span class="keyword">if</span> fcn(stack[<span class="number">0</span>]):</div><div class="line">            <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            temp = stack.pop(<span class="number">0</span>)</div><div class="line">            <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">                stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">            <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">                stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">    <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSBinaryPath</span><span class="params">(root, fcn)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   <span class="keyword">while</span> len(stack)&gt;<span class="number">0</span>:</div><div class="line">      <span class="keyword">print</span> <span class="string">'at node '</span> + str(stack[<span class="number">0</span>].getValue())</div><div class="line">      <span class="keyword">if</span> fcn(stack[<span class="number">0</span>]):</div><div class="line">         <span class="keyword">return</span> TracePath(stack[<span class="number">0</span>])</div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">   <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">TracePath</span><span class="params">(node)</span>:</span></div><div class="line">   <span class="keyword">if</span> <span class="keyword">not</span> node.getParent():</div><div class="line">      <span class="keyword">return</span> [node]</div><div class="line">   <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> [node] + TracePath(node.getParent())</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSBinaryOrdered</span><span class="params">(root, fcn, ItFcn)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   <span class="keyword">while</span> len(stack)&gt;<span class="number">0</span>:</div><div class="line">      <span class="keyword">print</span> <span class="string">'at node '</span> + str(stack[<span class="number">0</span>].getValue())</div><div class="line">      <span class="keyword">if</span> fcn(stack[<span class="number">0</span>]):</div><div class="line">         <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">      <span class="keyword">elif</span> ItFcn(stack[<span class="number">0</span>]):</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">         <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">   <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
+<h2 id="BFS-Code"><a href="#BFS-Code" class="headerlink" title="BFS Code"></a>BFS Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">BFSBinary</span><span class="params">(root, fcn)</span>:</span></div><div class="line">    queue = [root]</div><div class="line">    <span class="keyword">while</span> len(queue)&gt;<span class="number">0</span>:</div><div class="line">        <span class="keyword">if</span> fcn(queue[<span class="number">0</span>]):</div><div class="line">            <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            temp = queue.pop(<span class="number">0</span>)</div><div class="line">            <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">                queue.append(temp.getLeftBranch())</div><div class="line">            <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">                queue.append(temp.getRightBranch())</div><div class="line">    <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
+<h2 id="Ordered-search"><a href="#Ordered-search" class="headerlink" title="Ordered search"></a>Ordered search</h2><ul>
+<li>Suppose we know that the tree is ordered, meaning that for any node, all the nodes to the “left” are less than that node’s value, and all the nodes to the “right” are greater than that node’s value</li>
+</ul>
+<h2 id="Decision-Trees"><a href="#Decision-Trees" class="headerlink" title="Decision Trees"></a>Decision Trees</h2><ul>
+<li>A decision tree is a special type of binary tree (though could be more general tree with mutiple children)</li>
+<li>At each node, a decision is made, with a positive desicion taking the left branch, and a negative decision taking the right branch</li>
+<li>When we reach a leaf or a node that satisfies some goal, the path back to the root node defines the solution to the problem captured by the tree</li>
+</ul>
+<h2 id="Building-a-decision-tree"><a href="#Building-a-decision-tree" class="headerlink" title="Building a decision tree"></a>Building a decision tree</h2><ul>
+<li>One way to approach decision trees is to construct an actual tree, then search it </li>
+<li>An alternative is to implicitly build the tree as needed</li>
+<li>As an example , we will build a decision tree for a knapsack problem</li>
+</ul>
+<h2 id="The-Knapsack-Problem"><a href="#The-Knapsack-Problem" class="headerlink" title="The Knapsack Problem"></a>The Knapsack Problem</h2><ul>
+<li>Suppose we are given a set of objects, each with a value and a weight</li>
+<li>We have a finite sized knapsack, into which we want to store some of the items</li>
+<li>We want to store the items that have the most value, subject to the constraint that there is a limit to the cumulative size that will fit</li>
+</ul>
+<ul>
+<li>For the knapsack problem , we can build a decision tree as follows:<ul>
+<li>At the root level, we decide whether to include the first element (left branch) or not (right branch) </li>
+<li>At the nth level, we make the same decision for the nth element</li>
+<li>By keeping track of what we have included so far, and what we have left to consider, we can generate a binary tree of decisions</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">buildDTree</span><span class="params">(sofar, todo)</span>:</span></div><div class="line">   <span class="keyword">if</span> len(todo) == <span class="number">0</span>:</div><div class="line">      <span class="keyword">return</span> binaryTree(sofar)</div><div class="line">   <span class="keyword">else</span>:</div><div class="line">      withelt = buildDTree(sofar + [todo[<span class="number">0</span>]], todo[<span class="number">1</span>:])</div><div class="line">      withoutelt = buildDTree(sofar, [todo[<span class="number">1</span>:]])</div><div class="line">      here = binaryTree(sofar)</div><div class="line">      here.setLeftBranch(withelt)</div><div class="line">      here.setRightBranch(withoutelt)</div><div class="line">      <span class="keyword">return</span> here</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSDTree</span><span class="params">(root, valueFcn, constraintFcn)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   best = <span class="keyword">None</span></div><div class="line">   visited = <span class="number">0</span></div><div class="line">   <span class="keyword">while</span> len(queue) &gt; <span class="number">0</span>:</div><div class="line">      visited += <span class="number">1</span></div><div class="line">      <span class="keyword">if</span> constraintFcn(stack[<span class="number">0</span>].getValue()):</div><div class="line">         <span class="keyword">if</span> best == <span class="keyword">None</span>:</div><div class="line">            best = stack[<span class="number">0</span>]</div><div class="line">         <span class="keyword">elif</span> valueFcn(stack[<span class="number">0</span>].getValue()) &gt; valueFcn(best.getValue()):</div><div class="line">            best = stack[<span class="number">0</span>]</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            queue.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            queue.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         stack.pop(<span class="number">0</span>)</div><div class="line">   <span class="keyword">print</span> <span class="string">'visited'</span>, visited</div><div class="line">   <span class="keyword">return</span> best</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">BFSDTree</span><span class="params">(root, valueFcn, constraintFcn)</span>:</span></div><div class="line">   queue = [root]</div><div class="line">   best = <span class="keyword">None</span></div><div class="line">   visited = <span class="number">0</span></div><div class="line">   <span class="keyword">while</span> len(queue) &gt; <span class="number">0</span>:</div><div class="line">      visited += <span class="number">1</span></div><div class="line">      <span class="keyword">if</span> constraintFcn(queue[<span class="number">0</span>].getValue()):</div><div class="line">         <span class="keyword">if</span> best == <span class="keyword">None</span>:</div><div class="line">            best = queue[<span class="number">0</span>]</div><div class="line">            <span class="keyword">print</span> best.getValue()</div><div class="line">         <span class="keyword">elif</span> valueFcn(queue[<span class="number">0</span>].getValue()) &gt; valueFcn(best.getValue()):</div><div class="line">            best = queue[<span class="number">0</span>]</div><div class="line">            <span class="keyword">print</span> best.getValue()</div><div class="line">         temp = queue.pop(<span class="number">0</span>)</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            queue.append(temp.getLeftBranch())</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            queue.append(temp.getRightBranch())</div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         queue.pop(<span class="number">0</span>)</div><div class="line">   <span class="keyword">print</span> <span class="string">'visited'</span>, visited</div><div class="line">   <span class="keyword">return</span> best</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">6</span>, <span class="number">3</span>]</div><div class="line">b = [<span class="number">7</span>, <span class="number">2</span>]</div><div class="line">c = [<span class="number">8</span>, <span class="number">4</span>]</div><div class="line">d = [<span class="number">9</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line">treeTest = buildDTree([], [a, b, c, d])</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sumValues</span><span class="params">(lst)</span>:</span></div><div class="line">   vals = [e[<span class="number">0</span>] <span class="keyword">for</span> e <span class="keyword">in</span> lst]</div><div class="line">   <span class="keyword">return</span> sum(vals)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">WeightBelow10</span><span class="params">(lst)</span>:</span></div><div class="line">   wts = [e[<span class="number">1</span>] <span class="keyword">for</span> e <span class="keyword">in</span> lst]</div><div class="line">   <span class="keyword">return</span> sum(wts) &lt;= <span class="number">10</span></div><div class="line"></div><div class="line">foo = DFSDTree(treeTest, sumValues, WeightBelow10)</div><div class="line">foo1 = BFSDTree(treeTest, sumValues, WeightBelow10)</div></pre></td></tr></table></figure>
+<h2 id="Decision-Trees-1"><a href="#Decision-Trees-1" class="headerlink" title="Decision Trees"></a>Decision Trees</h2><ul>
+<li>Depth first and breadth frist still search the same number of nodes, the order is simply different</li>
+<li>If we are willing to settle for “good enough”, then there is a difference in work done by the two search methods.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSDTreeGoodEnough</span><span class="params">(root, valueFcn, constraintFcn, stop)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   best = <span class="keyword">None</span></div><div class="line">   visited = <span class="number">0</span></div><div class="line">   <span class="keyword">while</span> len(stack) &gt; <span class="number">0</span>:</div><div class="line">      visited += <span class="number">1</span></div><div class="line">      <span class="keyword">if</span> constraintFcn(stack[<span class="number">0</span>].getValue()):</div><div class="line">         <span class="keyword">if</span> best == <span class="keyword">None</span>:</div><div class="line">            best = stack[<span class="number">0</span>]</div><div class="line">            <span class="keyword">print</span> best.getValue()</div><div class="line">         <span class="keyword">elif</span> valueFcn(stack[<span class="number">0</span>].getValue()) &gt; valueFcn(best.getValue()):</div><div class="line">            best = stack[<span class="number">0</span>]</div><div class="line">            <span class="keyword">print</span> best.getValue()</div><div class="line">         <span class="keyword">if</span> stop(best.getValue()):</div><div class="line">            <span class="keyword">return</span> best</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         stack.pop(<span class="number">0</span>)</div><div class="line">   <span class="keyword">print</span> <span class="string">'visited'</span>, visited</div><div class="line">   <span class="keyword">return</span> best</div></pre></td></tr></table></figure>
+<h2 id="Search-an-implicit-tree"><a href="#Search-an-implicit-tree" class="headerlink" title="Search an implicit tree"></a>Search an implicit tree</h2><ul>
+<li>Our approach is inefficient, as it constructs the entire decision tree, and then searches it </li>
+<li>An alternative is only generate the nodes of the tree as needed</li>
+<li>Here is an example for the case of a knapsack problem, the same idea could be captured in other search problems</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DTImplicit</span><span class="params">(toConsider, avail)</span>:</span></div><div class="line">   <span class="comment">#return value of solution, and solution</span></div><div class="line">   <span class="keyword">if</span> toConsider == [] <span class="keyword">or</span> avail == <span class="number">0</span>:</div><div class="line">      result = (<span class="number">0</span>, ())</div><div class="line">   <span class="keyword">elif</span> toConsider[<span class="number">0</span>][<span class="number">1</span>] &gt; avail:</div><div class="line">      result = DTImplicit(toConsider[<span class="number">1</span>:], avail)</div><div class="line">   <span class="keyword">else</span>:</div><div class="line">      nextItem = toConsider[<span class="number">0</span>]</div><div class="line">      witVal, withToTake = DTImplicit(toConsider[<span class="number">1</span>:], avail - nextItem[<span class="number">1</span>])<span class="comment">#序列赋值</span></div><div class="line">      withVal += nextItem[<span class="number">0</span>]</div><div class="line">      withoutVal, withoutToTake = DTImplicit(toConsider[<span class="number">1</span>:], avail)</div><div class="line">      <span class="keyword">if</span> withVal &gt; withoutVal:</div><div class="line">         result = (withVal, withToTake + (nextItem,))</div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         result = (withoutVal, withToTake)</div><div class="line">   <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+<h2 id="What-if-our-trees-are-overgrown"><a href="#What-if-our-trees-are-overgrown" class="headerlink" title="What if our trees are overgrown"></a>What if our trees are overgrown</h2><ul>
+<li>We have been explicitly assuming that there are no “loops” in our trees, i.e. that a child has one parent, and that no node is the parent of a child closer to the root</li>
+<li>What if we relax this constraint?</li>
+<li>Generalization is called a graph<ul>
+<li>Lots of great graph search problems</li>
+<li>For now, we can think about ways to support search for binary trees that might have loops</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSBinaryNoLoop</span><span class="params">(root, fcn)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   seen = []</div><div class="line">   <span class="keyword">while</span> len(stack)&gt;<span class="number">0</span>:</div><div class="line">      <span class="keyword">print</span> <span class="string">'at node '</span> + str(stack[<span class="number">0</span>].getValue())</div><div class="line">      <span class="keyword">if</span> fcn(stack[<span class="number">0</span>]):</div><div class="line">         <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         seen.append(temp)</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp.getRightBranch() <span class="keyword">in</span> seen:</div><div class="line">               stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp.getLeftBranch() <span class="keyword">in</span> seen:</div><div class="line">               stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">   <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
+            </div>
+            <div class="yarpp-related">
+                <h3>Other Posts</h3>
+                <ol class="row cf ralated-posts" id="related-post">
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/09/hello-world/">
+                                  <img src="/2017/03/09/hello-world/hello-world.jpg" alt="hello-world.jpg" title="">
+                                  Hello World
+                                </a>
+                              
+                        </li>
+
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/23/「编程导论」第13讲/">
+                                  <img src="/2017/03/23/「编程导论」第13讲/13.jpg" alt="13.jpg" title="">
+                                  「编程导论」第13讲：继承和封装
+                                </a>
+                              
+                        </li>
+
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/27/「编程导论」第14讲/">
+                                  <img src="/2017/03/27/「编程导论」第14讲/14.jpg" alt="14.jpg" title="">
+                                  「编程导论」第14讲
+                                </a>
+                              
+                        </li>
+
+                    
+
+                        <li class="col span_1" id="related-post-grid">
+                              
+                                <a href="/2017/03/21/「读书笔记」《病隙碎笔》片段/">
+                                  <img src="/2017/03/21/「读书笔记」《病隙碎笔》片段/shitiesheng.jpg" alt="shitiesheng.jpg" title="">
+                                  「读书笔记」《病隙碎笔》片段
+                                </a>
+                              
+                        </li>
+
+                    
+                    
+                    
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2017/03/25/问卷设计/" class="next">Next &rarr;</a>
+  
+</nav>
+
+   
+    </div>
+    <section id="bottom" class="row cf">
+        <div class="col span_2">
+
+        <ul>
+            <li><a id="bottom-icon" href="http://blog.chenxiaolintryme.com" style="opacity: 1;"></a></li>
+        </ul>
+    </div>
+        
+    </section>
+    
+      <!-- scripts list from theme config.yml -->
+      
+        <script src="/js/NoneTone.js"></script>
+      
+        <script src="/js/header.js"></script>
+      
+        <script src="/js/easing.js"></script>
+      
+        <script src="/js/effects.js"></script>
+      
+    
+  </div>
+</body>
+</html>
