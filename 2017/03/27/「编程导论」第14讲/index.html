@@ -1,118 +1,351 @@
+<!doctype html>
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+  
 
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0;">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
-  <title>「编程导论」第14讲NoneTone</title>
-   
-    <!-- stylesheets list from config.yml -->
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-      <link type="text/css" rel="stylesheet" href="/css/single.css">
-    
-      <link type="text/css" rel="stylesheet" href="/css/NoneTone.css">
-    
-      <link type="text/css" rel="stylesheet" href="/css/grid.css">
-    
-      <link type="text/css" rel="stylesheet" href="/css/type.css">
-    
-      <link type="text/css" rel="stylesheet" href="/css/img.css">
-    
-      <link type="text/css" rel="stylesheet" href="/css/related.css">
     
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="编程导论," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="「编程导论」第14讲 二叉树">
+<meta property="og:url" content="http://yoursite.com/2017/03/27/「编程导论」第14讲/index.html">
+<meta property="og:site_name" content="NoneTone">
+<meta property="og:image" content="http://yoursite.com/2017/03/27/「编程导论」第14讲/14.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/27/「编程导论」第14讲/14-1.jpg">
+<meta property="og:updated_time" content="2017-03-28T02:23:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「编程导论」第14讲 二叉树">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/27/「编程导论」第14讲/14.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/27/「编程导论」第14讲/"/>
+
+
+
+
+
+  <title> 「编程导论」第14讲 二叉树 | NoneTone </title>
 </head>
 
-<body>
-  <div id="box" class="hfead">
-    <header id="header" >
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NoneTone</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-        <section id="menu" class="row cf inactive">
-            <ul class="span_1 col">
-                <li>
-                    <a href="/">Main Page 主页</a>
-                </li>
-                <li>
-                    <a href="/archives">Recent 最新发布</a>
-                </li>
-                <li>
-                    <a href="/resume">Resume 简历</a>
-                </li>
-            </ul>
-            <ul class="span_1 col">
-                <li>
-                    <a href="/categories/design">Design 设计</a>
-                </li>
-                <li>
-                    <a href="/categories/user research">User Research 用户研究</a>
-                </li>
-                <li>
-                    <a href="/categories/academic">Academic 学术</a>
-                </li>
-            </ul>
-            <ul class="span_1 col">
-                <li>
-                    <a href="/categories/psychology">Psychology 心理学</a>
-                </li>
-                <li>
-                    <a href="/categories/coding">Coding 编程艺术</a>
-                </li>
-                <li>
-                    <a href="/categories/mindpool">Mindpool 竹林小馆</a>
-                </li>
-            </ul>
-            <ul class="span_1 col">
-                <li>
-                    <a href="/about">About 关于筱琳</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact 联系方式</a>
-                </li>
-            </ul>
-        </section>
-        <section id="logoandmore" class="row cf">
-            <div id="profession" class="col span 4">
-                <div class="logo"></div>
-                <div id="arrow"></div>
-            </div>  
-        </section>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
 
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
     </header>
-    <div id="container">
-             <div class="row cf" id="main">
-    <div class="col span_4 content" id="full-single">
-        <div>
-            <section class="row cf title" id="posthead">
-                <div class="col span_4">
-                    <h1>「编程导论」第14讲</h1>
-                    <h3 class="subhead"></h3>
-                    <p class="date">
-                        <time datetime="2017-03-27T02:17:15.000Z">
-                        3/27/2017
-                        
-    • 
-    <a class="article-category-link" href="/categories/coding/">coding</a>
-                      
-                        
-            with
-            <a class="article-tag-link" href="/tags/编程导论/">编程导论</a>
 
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
-                    </time>
-                    </p>
-                </div>
-            </section>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/27/「编程导论」第14讲/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiaolin Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NoneTone">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                「编程导论」第14讲 二叉树
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T10:17:15+08:00">
+                2017-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/coding/" itemprop="url" rel="index">
+                    <span itemprop="name">coding</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="entry-content row cf">
-            <div class="featured-image span_4">
-                <img src="/2017/03/27/「编程导论」第14讲/14.jpg" alt="14.jpg" title="">
-            </div>
-            <div class="entry" id="long-format">
-                <h2 id="Tree-definition"><a href="#Tree-definition" class="headerlink" title="Tree definition"></a>Tree definition</h2><ul>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2017/03/27/「编程导论」第14讲/14.jpg" alt="14.jpg" title="">
+<a id="more"></a>
+<h2 id="Tree-definition"><a href="#Tree-definition" class="headerlink" title="Tree definition"></a>Tree definition</h2><ul>
 <li>A tree consists of one or more nodes <ul>
 <li>A node typically has a value associated with it</li>
 </ul>
@@ -216,98 +449,346 @@
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFSBinaryNoLoop</span><span class="params">(root, fcn)</span>:</span></div><div class="line">   stack = [root]</div><div class="line">   seen = []</div><div class="line">   <span class="keyword">while</span> len(stack)&gt;<span class="number">0</span>:</div><div class="line">      <span class="keyword">print</span> <span class="string">'at node '</span> + str(stack[<span class="number">0</span>].getValue())</div><div class="line">      <span class="keyword">if</span> fcn(stack[<span class="number">0</span>]):</div><div class="line">         <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">      <span class="keyword">else</span>:</div><div class="line">         temp = stack.pop(<span class="number">0</span>)</div><div class="line">         seen.append(temp)</div><div class="line">         <span class="keyword">if</span> temp.getRightBranch():</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp.getRightBranch() <span class="keyword">in</span> seen:</div><div class="line">               stack.insert(<span class="number">0</span>, temp.getRightBranch())</div><div class="line">         <span class="keyword">if</span> temp.getLeftBranch():</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> temp.getLeftBranch() <span class="keyword">in</span> seen:</div><div class="line">               stack.insert(<span class="number">0</span>, temp.getLeftBranch())</div><div class="line">   <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
-            </div>
-            <div class="yarpp-related">
-                <h3>Other Posts</h3>
-                <ol class="row cf ralated-posts" id="related-post">
-                    
 
-                        <li class="col span_1" id="related-post-grid">
-                              
-                                <a href="/2017/03/09/hello-world/">
-                                  <img src="/2017/03/09/hello-world/hello-world.jpg" alt="hello-world.jpg" title="">
-                                  Hello World
-                                </a>
-                              
-                        </li>
-
-                    
-
-                        <li class="col span_1" id="related-post-grid">
-                              
-                                <a href="/2017/03/23/「编程导论」第13讲/">
-                                  <img src="/2017/03/23/「编程导论」第13讲/13.jpg" alt="13.jpg" title="">
-                                  「编程导论」第13讲：继承和封装
-                                </a>
-                              
-                        </li>
-
-                    
-
-                        <li class="col span_1" id="related-post-grid">
-                              
-                                <a href="/2017/03/27/「编程导论」第14讲/">
-                                  <img src="/2017/03/27/「编程导论」第14讲/14.jpg" alt="14.jpg" title="">
-                                  「编程导论」第14讲
-                                </a>
-                              
-                        </li>
-
-                    
-
-                        <li class="col span_1" id="related-post-grid">
-                              
-                                <a href="/2017/03/21/「读书笔记」《病隙碎笔》片段/">
-                                  <img src="/2017/03/21/「读书笔记」《病隙碎笔》片段/shitiesheng.jpg" alt="shitiesheng.jpg" title="">
-                                  「读书笔记」《病隙碎笔》片段
-                                </a>
-                              
-                        </li>
-
-                    
-                    
-                    
-                </ol>
-            </div>
-        </div>
+      
     </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/编程导论/" rel="tag"># 编程导论</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/25/问卷设计/" rel="next" title="谋定而后动——问卷设计">
+                <i class="fa fa-chevron-left"></i> 谋定而后动——问卷设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Xiaolin Chen" />
+          <p class="site-author-name" itemprop="name">Xiaolin Chen</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tree-definition"><span class="nav-number">1.</span> <span class="nav-text">Tree definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-trees"><span class="nav-number">2.</span> <span class="nav-text">Binary trees</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-tree-class"><span class="nav-number">3.</span> <span class="nav-text">Binary tree class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Searching-a-tree"><span class="nav-number">4.</span> <span class="nav-text">Searching a tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Depth-first-search-for-containment"><span class="nav-number">5.</span> <span class="nav-text">Depth first search for containment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS-Code"><span class="nav-number">6.</span> <span class="nav-text">DFS Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS-Code"><span class="nav-number">7.</span> <span class="nav-text">BFS Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ordered-search"><span class="nav-number">8.</span> <span class="nav-text">Ordered search</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Decision-Trees"><span class="nav-number">9.</span> <span class="nav-text">Decision Trees</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-a-decision-tree"><span class="nav-number">10.</span> <span class="nav-text">Building a decision tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Knapsack-Problem"><span class="nav-number">11.</span> <span class="nav-text">The Knapsack Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Decision-Trees-1"><span class="nav-number">12.</span> <span class="nav-text">Decision Trees</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-an-implicit-tree"><span class="nav-number">13.</span> <span class="nav-text">Search an implicit tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-if-our-trees-are-overgrown"><span class="nav-number">14.</span> <span class="nav-text">What if our trees are overgrown</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiaolin Chen</span>
 </div>
 
 
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
 
-<nav id="pagination">
-  
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
 
-  
 
-  
-    <a href="/2017/03/25/问卷设计/" class="next">Next &rarr;</a>
-  
-</nav>
-
-   
-    </div>
-    <section id="bottom" class="row cf">
-        <div class="col span_2">
-
-        <ul>
-            <li><a id="bottom-icon" href="http://blog.chenxiaolintryme.com" style="opacity: 1;"></a></li>
-        </ul>
-    </div>
         
-    </section>
+
+        
+      </div>
+    </footer>
+
     
-      <!-- scripts list from theme config.yml -->
-      
-        <script src="/js/NoneTone.js"></script>
-      
-        <script src="/js/header.js"></script>
-      
-        <script src="/js/easing.js"></script>
-      
-        <script src="/js/effects.js"></script>
-      
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
     
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
 </body>
 </html>
